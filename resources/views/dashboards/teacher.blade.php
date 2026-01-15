@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <h1>Hello Teacher</h1>
-</body>
-</html>
+@extends('layouts.teacher')
+@section('content')
+            <h1>Hello {{session('user_name')}}({{session('user_id')}})</h1>
+@endsection

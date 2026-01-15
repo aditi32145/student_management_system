@@ -257,10 +257,12 @@
     </div>
 
     <button class="btn" type="submit">Login</button>
-
-    <div class="register-link"> Don't have an account?
-        <a href="{{ route('register') }}">Register here</a>
-    </div>
+@if(session('error'))
+    <p style="color:red; text-align:center; margin-top:10px;">
+        {{ session('error') }}
+    </p>
+@endif
+   
 </form>
 
         </div>

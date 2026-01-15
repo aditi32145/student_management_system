@@ -10,6 +10,13 @@
 
 
     <div class="header-right">
+        
+        <!-- Notification Icon -->
+        <div class="notification-wrapper">
+            <span class="notification-icon">🔔</span>
+            <span class="notification-badge">3</span>
+        </div>
+
         <div class="admin-info">
             <span class="admin-name">👤 Admin</span>
         </div>
@@ -63,6 +70,31 @@
     align-items: center;
 }
 
+.header-right {
+display: flex;
+align-items: center;
+gap: 18px;
+}
+.notification-wrapper {
+position: relative;
+cursor: pointer;
+}
+.notification-icon {
+font-size: 22px;
+}
+.notification-badge {
+position: absolute;
+top: -2px;
+right: -2px;
+background: #ffcc00;
+color: #000;
+font-size: 11px;
+font-weight: bold;
+padding: 1px;
+border-radius: 50%;
+min-width: 14px;
+text-align: center;
+}
 
 .admin-info {
     background: rgba(255, 255, 255, 0.15);

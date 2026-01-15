@@ -3,12 +3,28 @@
 
 
     <ul class="nav-links">
-        <li><a href="{{ route('admin.dashboard') }}"><span>📊</span>Dashboard</a></li>
-        <li><a href="#"><span>👨‍🎓</span>Students</a></li>
-        <li><a href="#"><span>👨‍🏫</span>Teachers</a></li>
+        <li><a href="{{ route('admin.dashboard') }}" 
+        class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}"><span>📊</span>Dashboard</a></li>
+        <!-- <li><a href="#"><span>👨‍🎓</span>Students</a></li> -->
+         <li>
+       <a href="{{ route('admin.students.index') }} " 
+       class="{{ request()->routeIs('admin.students.*') ? 'active' : '' }}">
+            <span>👨‍🎓</span>Students
+        </a>
+    </li>
+
+        <!-- <li><a href="#"><span>👨‍🏫</span>Teachers</a></li> -->
+         <li>
+    <a href="{{ route('admin.teachers.index') }}"
+       class="{{ request()->routeIs('admin.teachers.*') ? 'active' : '' }}">
+        <span>👨‍🏫</span>Teachers
+    </a>
+</li>
+
         <!-- <li><a href="#"><span>📅</span>Events</a></li> -->
          <li>
-    <a href="{{ route('admin.events.index') }}">
+    <a href="{{ route('admin.events.index') }}"
+    class="{{ request()->routeIs('admin.events.*') ? 'active' : '' }}">
         <span>📅</span>Events
     </a>
 </li>
@@ -16,7 +32,8 @@
         <li><a href="#"><span>📝</span>Exams</a></li>
         <li><a href="#"><span>📢</span>Notices</a></li>
         <!-- <li><a href="#"><span>✉️</span>Newsletter</a></li> -->
-         <li><a href="{{ route('admin.newsletter') }}"><span>✉️</span>Newsletter</a></li>
+         <li><a href="{{ route('admin.newsletter') }}"
+         class="{{ request()->routeIs('admin.newsletter') ? 'active' : '' }}"><span>✉️</span>Newsletter</a></li>
     </ul>
 
 
